@@ -1,0 +1,8 @@
+access-list 2 permit {{ inside_network }}
+ip nat inside source list 2 interface {{ outside_interface }} vrf control-data overload
+{% for iface in inside_interfaces %}
+interface {{ iface }}
+ip nat inside
+{% endfor %}
+interface {{ outside_interface }}
+ip nat outside
