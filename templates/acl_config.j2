@@ -1,0 +1,8 @@
+ip access-list extended ACL-TEST
+{% for net in allowed_networks %}
+permit tcp {{ net }} any eq 22
+permit tcp {{ net }} any eq 23
+{% endfor %}
+deny ip any any log
+interface {{ interface }}
+ip access-group ACL-TEST in
