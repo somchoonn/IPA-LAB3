@@ -1,4 +1,3 @@
-# IPA-LAB3
-LAB-IPA Week 3
+# IPA-LAB-Week3
 66070247 Chanokchon Pancome
 
